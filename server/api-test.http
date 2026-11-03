@@ -1,0 +1,68 @@
+# # Test 1: Create Todo
+# POST http://localhost:5000/api/todos HTTP/1.1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZTlmNTQ3ZTlkZTE2OGNlM2Q4MzFiYSIsImlhdCI6MTc5MzcxNzYxMCwiZXhwIjoxNzk0MzIyNDEwfQ.K6EC-_c5sIShhVyf_kT5-s6W5BdTLdIiO-srsArtYx4
+# content-type: application/json
+
+# {
+#   "title": "Build a Todo App",
+#   "description": "Build a full-stack MERN Todo application with user authentication and CRUD functionality.",
+#   "priority": "Medium"
+# }
+
+
+# Test 2: Get All Todos
+# - Method: GET 
+
+# GET http://localhost:5000/api/todos HTTP/1.1
+
+
+
+# Test 3: Update Todo
+
+# Copy the _id from the POST response.
+# - Method: PUT
+
+# PUT http://localhost:5000/api/todos/6ae9e9ab4d1e76233c0215e7 HTTP/1.1
+# content-type: application/json
+
+# {
+#   "completed": true
+# }
+
+
+# Test 4: Delete Todo
+# - Method: DELETE
+# DELETE http://localhost:5000/api/todos/6ae9e9ab4d1e76233c0215e7 HTTP/1.1
+
+
+
+# =====================================================================
+
+
+
+# User register
+# POST http://localhost:5000/api/auth/register HTTP/1.1
+# content-type: application/json
+
+# {
+#   "name": "testuser2",
+#   "email": "testuser2@example.com",
+#   "password": "password123"
+# }
+
+
+# User login
+# POST http://localhost:5000/api/auth/login HTTP/1.1
+# content-type: application/json
+
+# {
+#   "email": "testuser2@example.com",
+#   "password": "password123"
+# }
+
+
+
+// Test 5: Get All Todos with Authorization
+# - Method: GET
+GET http://localhost:5000/api/todos HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZTlmNTUzZTlkZTE2OGNlM2Q4MzFiYiIsImlhdCI6MTc5MzcxNzc4MCwiZXhwIjoxNzk0MzIyNTgwfQ.FXj1sofnwr7We6NvprE2n2xXEsbESEhfBnS9Vmzf31M
